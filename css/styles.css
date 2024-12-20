@@ -36,7 +36,7 @@
   --blueDark: hsl(248, 70%, 10%);
   --orangeLight: hsl(7, 88%, 67%);
   --orange: hsl(7, 71%, 60%);
-  --GradientText: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+  --GradientText: to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%);
 }
 
 label {
@@ -53,14 +53,71 @@ label {
   overflow: hidden;
 }
 
+.box {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-top: 25px;
+  gap: 50px;
+  z-index: 3;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user{
+    margin-bottom: 55px;
+}
+
+.user__info {
+  font-size: 3.5rem;
+  color: var(--white);
+}
+
+.user__name {
+  background: linear-gradient(var(--GradientText));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.user__paragraph {
+    width: 40%;
+    margin: 25px auto 0;
+    color: var(--grey);
+}
+
+.user__email{
+    color: var(--orangeLight);
+}
+
+.ticket {
+    background-image: url(../assets/images/pattern-ticket.svg);
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
 .container__pattern {
   position: absolute;
   z-index: 2;
 }
 
-.container__pattern--circle{
-    top: 50%;
-    right: 20%;
+.container__pattern--circle {
+  top: 50%;
+  right: 20%;
 }
 
 .container__pattern--squigglyRight {
@@ -69,6 +126,6 @@ label {
 }
 
 .container__pattern--squigglyBottom {
-    bottom: -18%;
-    left: 0;
+  bottom: -18%;
+  left: 0;
 }
