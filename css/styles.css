@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 400;
+  src: url(../assets/fonts/static/Inconsolata-Regular.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 500;
+  src: url(../assets/fonts/static/Inconsolata-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 700;
+  src: url(../assets/fonts/static/Inconsolata-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Inconsolata";
+  font-weight: 800;
+  src: url(../assets/fonts/static/Inconsolata-ExtraBold.ttf) format("truetype");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", sans-serif;
+}
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --whiteDark: hsl(252, 6%, 83%);
+  --grey: hsl(245, 15%, 58%);
+  --greyDark: hsl(245, 19%, 35%);
+  --blueDark: hsl(248, 70%, 10%);
+  --orangeLight: hsl(7, 88%, 67%);
+  --orange: hsl(7, 71%, 60%);
+  --GradientText: hsl(7, 86%, 67%) to hsl(0, 0%, 100%);
+}
+
+label {
+  font-size: 1.25rem;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../assets/images/background-desktop.png);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.container__pattern {
+  position: absolute;
+  z-index: 2;
+}
+
+.container__pattern--circle{
+    top: 50%;
+    right: 20%;
+}
+
+.container__pattern--squigglyRight {
+  top: 60px;
+  right: 0;
+}
+
+.container__pattern--squigglyBottom {
+    bottom: -18%;
+    left: 0;
+}
