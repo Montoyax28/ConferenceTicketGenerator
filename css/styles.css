@@ -109,16 +109,23 @@ label {
 }
 
 .ticket {
-  background-image: url(../assets/images/pattern-ticket.svg);
-  width: 560px;
-  height: 280px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   overflow: hidden;
+  width: 100%;
+  height: 280px;
+  margin-bottom: 35px;
+}
+
+.ticket__container {
+  width: 560px;
+  height: 100%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-image: url(../assets/images/pattern-ticket.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .ticket__box {
@@ -219,4 +226,49 @@ label {
 .container__pattern--squigglyBottom {
   bottom: -18%;
   left: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-image: url(../assets/images/background-tablet.png);
+  }
+  .box {
+    height: 100%;
+    overflow-y: auto;
+  }
+  .user__paragraph {
+    width: 90%;
+  }
+  .user {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    background-image: url(../assets/images/background-mobile.png);
+  }
+  .ticket__container:has(.ticket),
+  .ticket__container {
+    width: 100%;
+    height: 100%;
+  }
+  .ticket {
+    width: 80%;
+    height: 280px;
+  }
+
+  .ticket__title,
+  .ticket__date {
+    font-size: 1.5rem;
+  }
+
+  .ticket__name,
+  .ticket__date,  .ticket__id  {
+    font-size: 1rem;
+  }
+
+  .ticket__username{
+    font-size: 0.8rem;
+  }
 }
